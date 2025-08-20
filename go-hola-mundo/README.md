@@ -17,7 +17,7 @@ go build -o main .
 # Exponer  el puerto 5000
 EXPOSE 8080
 ````
- * Es fundamental que se ejecute el comando `CMD` al finalizar el buildeo de la `docker image`
+ * Es fundamental que se ejecute el comando `CMD` al runnear la `docker image`
 ````bash
 # Ejecutar el proyecto
 ./main
