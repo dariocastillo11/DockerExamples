@@ -4,10 +4,10 @@
 Juego simple creado con Pygame que muestra cómo ejecutar aplicaciones gráficas en Docker.
 
 ## 💡 Warning
-Las siguientes `warnings` son para crear el `docker image`
+Las siguientes `warnings` son para crear el `dockerfile`
  * Se recomienda empezar desde la siguiente imagen: `python:3.9-slim`
  * No olvidar copiar los files dentro del docker
- * No olvidar instalar las dependencias antes del building del `docker image`
+ * No olvidar instalar las dependencias durante el building del `docker image`
 ````bash
 # Ejecutar el comando
 apt-get update && apt-get install -y \
@@ -29,7 +29,7 @@ pip install --no-cache-dir -r requirements.txt
 ````
 ENV DISPLAY=:0
 ```` 
- * Es fundamental que se ejecute el comando `CMD` al finalizar el buildeo de la `docker image`
+ * Es fundamental que se ejecute el comando `CMD` al runnear la `docker image`
 ````bash
 # Ejecutar el proyecto
 python juego.py
