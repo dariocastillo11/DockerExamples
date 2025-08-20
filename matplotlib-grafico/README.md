@@ -24,7 +24,7 @@ python graficar.py
 ## 🚀 Cómo usar
 ```bash
 # Construir la imagen
-docker build -t flask-hola .
+docker build -t matplotlib-grafico .
 
 # Ejecutar el contenedor
 docker run -it --rm -v $(pwd)/output:/app/output matplotlib-grafico
