@@ -85,6 +85,7 @@ Cada proyecto debe incluir:
 - [Docker Documentation](https://docs.docker.com/)
 - [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
 - [Docker Compose Reference](https://docs.docker.com/compose/)
+- [Notas Docker](https://drive.google.com/file/d/1rUnLn98fu-KZJvF6QfbLh3GFw2AASPeM/view?usp=sharing)
 
 ### 🛠️ Herramientas recomendadas:
 - **Docker Desktop** (para Windows/Mac)
