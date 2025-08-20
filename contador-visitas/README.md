@@ -36,7 +36,7 @@ chmod +x start.sh
 ## 🚀 Cómo usar
 ```bash
 # Construir la imagen
-docker build -t flask-hola .
+docker build -t contador-visitas .
 
 # Ejecutar el contenedor
 docker run -d -p 5000:5000 --name visitas-app contador-visitas
