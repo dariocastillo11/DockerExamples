@@ -35,18 +35,7 @@ chmod +x start.sh
 
 ## 🚀 Actividades
 Deben hacer el `DOCKER_SETUP.md` teniendo las siguientes consideraciones
->REDACTAR
-```bash
-# Construir la imagen
-docker build -t contador-visitas .
-
-# Ejecutar el contenedor
-docker run -d -p 5000:5000 --name visitas-app contador-visitas
-
-# Probar la aplicación (curl opcional, podes entrar desde el navegador)
-curl http://localhost:5000
-curl http://localhost:5000/health
-curl http://localhost:5000/reiniciar
-
-# Acceder a Redis
-docker exec -it visitas-app redis-cli GET visitas
+* ¿Qué pasa si corremos la `docker image` sin asignar ninguna flag a `docker run`? ¿Podemos usar la misma terminal para correr otros comandos?
+ * El proyecto usa el usa el port `5000`. Intentar hacer `docker run` con y sin el parametro correspondiente. ¿Qué ocurre en cada caso?
+ * Ejecutar `docker stop <container>`. ¿Qué pasa si al hacer `docker run` no le asigno un nombre al contenedor? ¿Qué debo poner en `<container>`para poder hacer `docker stop <container>`?
+ * Si corro el contenedor en segundo plano, no veo información de la dirección IP que necesito para usar mi proyecto. Documentar qué se debe poner en el navegador
