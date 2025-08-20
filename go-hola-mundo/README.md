@@ -26,7 +26,7 @@ EXPOSE 8080
 ## 🚀 Cómo usar
 ```bash
 # Construir la imagen
-docker build -t flask-hola .
+docker build -t go-app .
 
 # Ejecutar el contenedor
 docker run -d -p 8080:8080 --name go-server go-app
