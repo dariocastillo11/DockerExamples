@@ -4,10 +4,10 @@
 Aplicación Python que genera gráficos de señales senoidales usando Matplotlib y NumPy. Los gráficos se guardan como archivos PNG.
 
 ## 💡 Warning
-Las siguientes `warnings` son para crear el `docker image`
+Las siguientes `warnings` son para crear el `dockerfile`
  * Se recomienda empezar desde la siguiente imagen: `python:3.9-slim`
  * No olvidar copiar los files dentro del docker
- * No olvidar instalar las dependencias antes del building del `docker image`
+ * No olvidar instalar las dependencias durante el building del `docker image`
 ````bash
 # Ejecutar el comando
 pip install --no-cache-dir -r requirements.txt
@@ -15,7 +15,7 @@ pip install --no-cache-dir -r requirements.txt
 # Tambien ejecutar el comando
 mkdir -p /app/output
 ````
- * Es fundamental que se ejecute el comando `CMD` al finalizar el buildeo de la `docker image`
+ * Es fundamental que se ejecute el comando `CMD` al runnear la `docker image`
 ````bash
 # Ejecutar el proyecto
 python graficar.py
