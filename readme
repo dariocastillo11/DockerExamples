@@ -1,0 +1,47 @@
+# 🎮 Juego con Pygame
+
+## 📋 Descripción
+Juego simple creado con Pygame que muestra cómo ejecutar aplicaciones gráficas en Docker.
+
+## 💡 Warning
+Las siguientes `warnings` son para crear el `dockerfile`
+ * Se recomienda empezar desde la siguiente imagen: `python:3.9-slim`
+ * No olvidar copiar los files dentro del docker
+ * No olvidar instalar las dependencias durante el building del `docker image`
+````bash
+# Ejecutar el comando
+apt-get update && apt-get install -y \
+    libsdl2-dev \
+    libsdl2-image-dev \
+    libsdl2-mixer-dev \
+    libsdl2-ttf-dev \
+    libportmidi-dev \
+    libswscale-dev \
+    libavformat-dev \
+    libavcodec-dev \
+    libfreetype6-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Este comando tambien es necesario
+pip install --no-cache-dir -r requirements.txt
+````
+ * Para Pygame necesitamos display virtual. Eso lo logras con el siguiente comando
+````
+ENV DISPLAY=:0
+```` 
+ * Es fundamental que se ejecute el comando `CMD` al runnear la `docker image`
+````bash
+# Ejecutar el proyecto
+python juego.py
+````
+
+## 🚀 Cómo usar
+```bash
+# Construir la imagen
+docker build -t pygame-juego .
+
+# Ejecutar el contenedor
+docker run -it --rm \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  pygame-juego
